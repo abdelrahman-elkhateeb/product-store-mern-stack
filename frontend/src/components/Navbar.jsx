@@ -3,19 +3,18 @@ import {
   Container,
   Flex,
   HStack,
-  Link,
   Text,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { CiSquarePlus } from "react-icons/ci";
 import { FaSun } from "react-icons/fa";
 import { IoMdMoon } from "react-icons/io";
-import { useProductStore } from "../store/product";
 
 function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { products } = useProductStore();
+
   return (
     <Container
       maxW={"1140px"}
